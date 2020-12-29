@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Today!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-wrap">
+        <header class="searchbox">
+            <input type="text" class="searchbox-input" autocomplete="off" placeholder="Search for a city...">
+            <div class="searchbox-icon">
+                <i class="fas fa-search-location"></i>
+            </div>
+        </header>
+        <main>
+            <section class="error"></section>
+            <section class="location">
+                <div class="city"></div>
+                <div class="date"></div>
+            </section>
+            <div class="current">
+                <div class="temp"><i class="fas fa-arrow-up"></i></div>
+                <div class="feels"></div>
+                <div class="weather"></div>
+                
+                <div class="hi-low"><i class="blank">Input a City in the Search Box and Hit Enter!</i></div>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
