@@ -1,3 +1,11 @@
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("serviceWorker.js").then(registration => {
+
+    }).catch(error => {
+
+    });
+}
+
 const api = {
     key: "e7053aa75d1c3c8f01872ce292dd358c",
     base: "https://api.openweathermap.org/data/2.5/"
