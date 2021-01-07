@@ -1,8 +1,8 @@
 {
-    "name": "Weather Today!",
-    "short_name": "Weather Today!",
+    "name": "Weather Today",
+    "short_name": "Weather Today",
     "start_url": ".",
-    "background_color": "#d19973",
+    "background_color": "#fff",
     "theme_color": "#d1773b",
     "display": "standalone",
     "icons": [
