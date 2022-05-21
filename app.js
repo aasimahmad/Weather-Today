@@ -21,7 +21,6 @@ function setQuery(evt) {
 }
 
 function getResults(query) {
-
     fetch(`${api.base}weather?q=${query}&units=metric&appid=${api.key}`)
     .then(weather => {
         return weather.json();
@@ -34,11 +33,6 @@ function displayError(err) {
     let message = document.querySelector('.error');
     if (err.message === "Failed to fetch") {
         message.innerHTML = `Please check your internet connection and try again!`
-        setTimeout(function(){ 
-            message.innerHTML = "";
-         }, 2000);
-    } else if (err.message === "city not found") {
-        message.innerHTML = `City not found!`
         setTimeout(function(){ 
             message.innerHTML = "";
          }, 2000);
@@ -85,6 +79,14 @@ function displayResults(weather) {
 
     let hiLow = document.querySelector('.hi-low');
     hiLow.innerHTML = `${Math.round(weather.main.temp_min)}°C / ${Math.round(weather.main.temp_max)}°C`;
+    
+    let message = document.querySelector('.error');
+    if (weather.message === "city not found") {
+        message.innerHTML = `City not found!`
+        setTimeout(function(){ 
+            message.innerHTML = "";
+         }, 2000);
+    }
 }
 
 function dateBuilder(d) {
