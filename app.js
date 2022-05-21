@@ -37,7 +37,7 @@ function displayError(err) {
         setTimeout(function(){ 
             message.innerHTML = "";
          }, 2000);
-    } else if (err.message.contains("404")) {
+    } else if (err.message === "city not found") {
         message.innerHTML = `City not found!`
         setTimeout(function(){ 
             message.innerHTML = "";
