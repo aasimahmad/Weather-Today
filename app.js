@@ -37,7 +37,7 @@ function displayError(err) {
         setTimeout(function(){ 
             message.innerHTML = "";
          }, 2000);
-    } else if (err.message === "Cannot read property 'country' of undefined") {
+    } else if (err.message.contains("404")) {
         message.innerHTML = `City not found!`
         setTimeout(function(){ 
             message.innerHTML = "";
